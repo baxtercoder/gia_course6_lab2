@@ -2,15 +2,13 @@
 import os
 import requests
 
-# set source dir for feedback file:
-src_dir = "feedback/"
 
 # capture list of files:
-files = os.listdir(src_dir)
+files = os.listdir('/data/feedback')
 
 # function to read file lines into list:
 def readlines(file):
-    with open(src_dir + file) as f:
+    with open('/data/feedback/' + file) as f:
         lines = f.read().splitlines()
     return lines
 
